@@ -1,9 +1,4 @@
-Good idea. This is exactly how you turn confusion into a **clean project document**.
-Below is a **clean, copy-pasteable summary** of **ONLY the commands that actually worked and matter**, written in **installation → usage order**.
 
-You can directly use this in your report.
-
----
 
 # Mininet VM Setup & Working Commands (Verified)
 
@@ -156,3 +151,42 @@ Prevents controller and interface conflicts.
 ```powershell
 ssh mininet@<VM-IP>
 ```
+
+Step 1: Start Mininet (from SSH or VM — same thing)
+sudo mn --topo linear,4
+
+
+You must see:
+
+mininet>
+
+Step 3: Understand what h1 really is
+
+Inside mininet>:
+
+h1 ifconfig
+
+
+This shows:
+
+h1 is a Linux system
+
+With its own IP
+
+Its own network interface
+
+Step 4: Enter a host (this is important)
+h1 bash
+
+
+Now prompt changes.
+
+You are inside h1.
+
+Run:
+
+ping (ip address of h4 .you can get it by running h4 ipconfig
+exit
+
+
+This is real Linux networking, just isolated.
